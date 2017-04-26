@@ -6,13 +6,12 @@ include_once 'log.php';
 if(isset($_POST['btn-password']))
 {
 	$email = $MySQLi_CON->real_escape_string(trim($_POST['email']));
-	$mobile = $MySQLi_CON->real_escape_string(trim($_POST['mobile']));
 	$upass = $MySQLi_CON->real_escape_string(trim($_POST['password']));
 	$password_again = $MySQLi_CON->real_escape_string(trim($_POST['password_again']));
 
 	$new_password = password_hash($upass, PASSWORD_DEFAULT);
 	
-	$query = $MySQLi_CON->query("SELECT * FROM donarregister WHERE email='$email' AND mobile='$mobile'");
+	$query = $MySQLi_CON->query("SELECT * FROM donarregister WHERE email='$email'");
 	$row=$query->fetch_array();
 
 	if($upass!=$password_again){
@@ -27,10 +26,10 @@ if(isset($_POST['btn-password']))
 
 			if(isset($_SESSION['userSession']))
 				{
-				//session_start();
+				session_start();
 				session_destroy();
 				unset($_SESSION['userSession']);
-				//header("Location: login");
+				header("Location: login");
 				exit();
 			}
 
@@ -89,7 +88,7 @@ if(isset($_POST['btn-password']))
 
                     <div class="navbar-brand">
                         <a href="index" class="navbar-logo"><img src="../assets/images/logo.png" alt="Mobirise"></a>
-                        <a class="navbar-caption" href="index.html">BLOODBANK</a>
+                        <a class="navbar-caption" href="../index.html">BLOODBANK</a>
                     </div>
 
                 </div>
@@ -100,12 +99,11 @@ if(isset($_POST['btn-password']))
                     </button>
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
-					<li class="nav-item"><a class="nav-link link" href="index.html">HOME</a></li>
-					<li class="nav-item"><a class="nav-link link" href="account">ACCOUNT</a></li>
+					<li class="nav-item"><a class="nav-link link" href="../index.html">HOME</a></li>
+					<li class="nav-item"><a class="nav-link link" href="login">LOGIN</a></li>
 					  <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
 					  <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
 					  <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
-					  <li class="nav-item"><a class="nav-link link" href="logout">LOGOUT</a></li>
 					  <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="https://mobirise.com/" data-toggle="dropdown-submenu" aria-expanded="false">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.html">FAQS</a></div></li></ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
@@ -139,15 +137,6 @@ if(isset($_POST['btn-password']))
                         <td class="lefttd">Email</td>
                         <td>: <input class="text-input" type="email" name="email" required="required" </td>
                       </tr>
-            <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-     <tr>
-                        <td class="lefttd">Phone Number</td>
-                        <td>: <input class="text-input" type="text" name="mobile" required="required" </td>
-                      </tr>
-          
             <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>

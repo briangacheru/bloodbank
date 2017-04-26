@@ -110,13 +110,15 @@ $query=mysqli_query($MySQLi_CON,"select * from requests ORDER BY id DESC limit $
 <table class='table table-bordered table-responsive'>
 <tr>
 <th>##</th>
-    <th>Email Address</th>
 <th>First Name</th>
 <th>Last Name</th>
 <th>Phone Number</th>
 <th>Blood Group</th>
 <th>Last Required Date</th>
+    <th>Units required</th>
     <th>Status</th>
+    <th>Issued Date</th>
+    <th>Issued Units</th>
 
 </tr>
     <?php
@@ -127,13 +129,15 @@ $query=mysqli_query($MySQLi_CON,"select * from requests ORDER BY id DESC limit $
             ?>
             <tr class="bg-table">
                 <td><input type="checkbox" name="chk[]" class="chk-box" value="<?= $ft['0'] ?>"/></td>
-                <td><?= $ft['1'] ?></td>
                 <td><?= $ft['2'] ?></td>
                 <td><?= $ft['3'] ?></td>
                 <td><?= $ft['4'] ?></td>
                 <td><?= $ft['5'] ?></td>
                 <td><?= $ft['7'] ?></td>
+                <td><?= $ft['10'] ?></td>
                 <td><?= $ft['8'] ?></td>
+                <td><?= $ft['12'] ?></td>
+                <td><?= $ft['11'] ?></td>
             </tr>
             <?php
         }

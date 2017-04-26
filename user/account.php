@@ -9,15 +9,9 @@ if(!isset($_SESSION['userSession']))
 $query = "SELECT * FROM donarregister WHERE email='$_SESSION[userSession]'";
 $account1 = mysqli_query($MySQLi_CON,$query) or die (mysqli_error());
 $account = mysqli_fetch_array($account1);
-$check_gender = $MySQLi_CON->query("SELECT gender FROM donarrregister");
-$countg = $check_gender['num_rows'];
 
-
-
-if (($account['ppic']=="") &&($countg == 'Male')) {
-	$msg4 = "<img src='../assets/images/male.png' style='border-radius:6px; border:8px solid #fff; padding:0px;' height=215px />";
-}else {
-	$msg4 = "<img src='../assets/images/female.png' style='border-radius:6px; border:8px solid #fff; padding:0px;' height=215px />";
+if ($account['ppic']=="") {
+  $msg4 = "<img src='../assets/images/profile.jpg' style='border-radius:6px; border:8px solid #fff; padding:0px;' height=150px />";
 }
 $MySQLi_CON->close();
 
@@ -25,7 +19,6 @@ $MySQLi_CON->close();
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Site made with Mobirise Website Builder v3.8.3, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v3.8.3, mobirise.com">
@@ -79,7 +72,7 @@ $MySQLi_CON->close();
                             <div class="dropdown-menu"><a class="dropdown-item" href="../contact">CONTACT US</a><a class="dropdown-item" href="../faqs">FAQS</a></div></li>
                     <li class="nav-item dropdown">
 					<a class="nav-link link dropdown-toggle" href="#" 
-					data-toggle="dropdown-submenu" aria-expanded="false"><?php echo $account['fname'];?></a>
+					data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['fname'];?></a>
 					<div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
 					<a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
 					</li>
@@ -139,7 +132,7 @@ $MySQLi_CON->close();
                         <div class="mbr-table-cell mbr-valign-top col-md-6">
 						
                             <h3 class="mbr-section-title display-2"><span style="font-weight: normal; color:#000; text-align: left;">
-                             Welcome, <?php echo $account['fname'];?>&nbsp; <?php echo $account['lname'];?></span></h3>
+                             <?php echo $account['fname'];?>&nbsp; <?php echo $account['lname'];?></span></h3>
 							 
                             <div class="mbr-section-btn"><a class="btn btn-primary" href="#features7-0" style="width:200px; padding-left:-10px;"> View Profile</a>
                               <a class="btn btn-primary" href="updateprofile.php" style="width:200px; padding-left:-10px;">Update Info</a> </div>

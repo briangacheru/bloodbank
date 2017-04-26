@@ -27,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
-  <title>Edit Camps</title>
+    <title>Edit Status</title>
   
   
 
@@ -90,7 +90,11 @@
 <tr>
     <th>First Name</th>
     <th>Last Name</th>
+    <th>Pints required</th>
+    <th>Last Required Date</th>
     <th>Status</th>
+    <th>Issued Date</th>
+    <th>Issued Pints</th>
 
 </tr>
 <?php
@@ -104,17 +108,29 @@ for($i=0; $i<$chkcount; $i++)
 		<tr>
 		<td>
     	<input type="hidden" name="id[]" value="<?php echo $row['id'];?>" />
-            <input type="text" name="fn[]" value="<?php echo $row['fname'];?>" class="form-control" readonly />
+            <input title="fname" type="text" name="fn[]" value="<?php echo $row['fname'];?>" class="form-control" readonly />
         </td>
             <td>
-                <input type="text" name="ln[]" value="<?php echo $row['lname'];?>" class="form-control" readonly />
+                <input title="lname" type="text" name="ln[]" value="<?php echo $row['lname'];?>" class="form-control" readonly />
             </td>
             <td>
-            <select name="st[]" value="<?php echo $row['status'];?>" class="form-control">
-                <option value="Waiting">Waiting</option>
-                <option value="Received">Received</option>
+                <input title="units" type="tel" name="units[]" value="<?php echo $row['units'];?>" class="form-control" readonly/>
+            </td>
+            <td>
+                <input title="reqdate" type="tel" name="reqdate[]" value="<?php echo $row['reqdate'];?>" class="form-control" readonly/>
+            </td>
+            <td>
+            <select title="status" name="st[]" value="<?php echo $row['status'];?>" class="form-control">
+                <option value="Waiting" style="color: red;">Waiting</option>
+                <option value="Received" style="color: green;">Received</option>
             </select>
         </td>
+            <td>
+                <input title="issueddate" name="id[]" value="<?php echo date('Y-m-d'); ?>" required readonly  class="form-control"/>
+            </td>
+            <td>
+                <input title="issuedunits" type="number" name="iu[]" value="<?php echo $row['issuedunits'];?>"  class="form-control" required/>
+            </td>
 
 		</tr>
 		<?php	

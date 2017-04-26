@@ -1,6 +1,6 @@
 <?php
 	require_once 'session.php';
-	require_once 'account_name.php';
+	require_once 'db.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
-  <title>View Users</title>
+  <title>Manage Requests</title>
   <link rel="stylesheet" href="../assets/css/material.css">
   <link rel="stylesheet" href="../assets/css/tether.min.css">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -69,32 +69,36 @@
 <div class = "container-fluid">
 		
 		<div class = "col-md-12 well">
-			<div class="mbr-section-btn"><a class="btn btn-primary" href="userregister.php">Add Recipient</a></div>
+			<div class="mbr-section-btn"><a class="btn btn-primary" href="#">Add Request</a></div>
 			<br/>
 			<br/>
 			<div class = "alert bg-table">
-				<table id = "table" class = "table-bordered">
+				<table id = "table" class = "table-bordered table-responsive">
 					<thead>
 						<tr>
-							<th>Firstname</th>
-							<th>Lastname</th>
-							<th>Email</th>
+							<th>Name</th>
 							<th>Blood Group</th>
+                            <th>Pints Required</th>
+                            <th>Last Required Date</th>
+                            <th>Pints Awarded</th>
+                            <th>Awarded Date</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
 						<?php
-							$query = $MySQLi_CON->query("SELECT * FROM `donarregister`");
+							$query = $MySQLi_CON->query("SELECT * FROM `requests`");
 							//$query = $MySQLi_CON->query("SELECT * FROM `donarregister`");
 							while($f_query = $query->fetch_array()){
 						?>
 						<tr>
-							<td><?php echo $f_query['fname']?></td>
-							<td><?php echo $f_query['lname']?></td>
-							<td><?php echo $f_query['email']?></td>
+							<td><?php echo $f_query['fname']?> <?php echo $f_query['lname']?></td>
 							<td><?php echo $f_query['b_id']?></td>
-							<td><center><a href = "member_edit.php?id=<?php echo $f_query['id']?>" class = "btn bg-warning"><span class = "glyphicon glyphicon-edit"></span>  Update</a> | <a  href = "bloodrequest.php?id=<?php echo $f_query['id']?>" class = "btn btn-primary"><span class = "glyphicon glyphicon-trash"></span> Send Request</a></center></td>
+							<td><?php echo $f_query['units']?></td>
+                            <td><?php echo $f_query['reqdate']?></td>
+                            <td><?php echo $f_query['issuedunits']?></td>
+                            <td><?php echo $f_query['issueddate']?></td>
+							<td><center><a href = "request_edit.php?id=<?php echo $f_query['id']?>" class = "btn bg-warning"><span class = "glyphicon glyphicon-edit"></span>Update </a> |<a  href = "delete_request.php?id=<?php echo $f_query['id']?>" class="btn btn-primary"><span class = "glyphicon glyphicon-trash"></span>Delete</a></center></td>
 						</tr>
 						<?php
 							}
@@ -104,7 +108,7 @@
 			</div>
 		</div>
 	</div>
-   
+
 
 </section>
 

@@ -74,4 +74,5 @@ function delete_records()
 	document.frm.submit();
 }
 
+
 //  page redirection

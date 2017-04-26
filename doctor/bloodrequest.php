@@ -91,12 +91,8 @@ include_once 'db.php';
                 include_once 'db.php';
                 include 'log.php';
 
-                if(!isset($_SESSION['userSession']))
-                {
-                    header("Location: account");
-                }
 
-                $query = "SELECT * FROM donarregister WHERE email='$_SESSION[userSession]'";
+                $query = "SELECT * FROM donarregister WHERE  id = '$_REQUEST[id]'";
                 $account1 = mysqli_query($MySQLi_CON,$query) or die (mysqli_error());
                 $account = mysqli_fetch_array($account1);
                

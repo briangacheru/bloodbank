@@ -41,8 +41,8 @@ if ($account['ppic']=="") {
   <link rel="stylesheet" href="../assets/dropdown/css/style.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/add.css" type="text/css">
-  
-  
+
+
 </head>
 <body>
 <section id="ext_menu-s">
@@ -73,7 +73,7 @@ if ($account['ppic']=="") {
                         <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link dropdown-toggle" href="#"
-                               data-toggle="dropdown-submenu" aria-expanded="false"><?php echo $account['lname'];?></a>
+                               data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['lname'];?></a>
                             <div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
                                 <a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
                         </li>
@@ -91,7 +91,7 @@ if ($account['ppic']=="") {
 </section>
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-after-navbar" id="header2-7" style="background-color: rgb(239, 239, 239);">
 
-    
+
 
     <div class="mbr-table mbr-table-full">
         <div class="mbr-table-cell">
@@ -100,11 +100,11 @@ if ($account['ppic']=="") {
                 <div class="mbr-section row">
                     <div class="mbr-table-md-up">
                         <div class="mbr-table-cell mbr-left-padding-md-up col-md-6 text-xs-center text-md-left">
-						
+
 							<div class="mbr-figure col-lg-6">
 							<table>
 							<tr>
-							<td  align="right">&nbsp;</td> 
+							<td  align="right">&nbsp;</td>
 							<td>
 							 <div class="user-img-div">
                              <?php
@@ -116,12 +116,12 @@ if ($account['ppic']=="") {
 						}?>
 							</div>
 							<div class="mbr-section-btn">
-                              <a class="btn btn-primary" style="margin-left:20px; margin-top:10px" href="uploadpicture.php">Edit Profile Picture</a>    
+                              <a class="btn btn-primary" style="margin-left:20px; margin-top:10px" href="uploadpicture.php">Edit Profile Picture</a>
 							</div>
-							
+
 							</td></tr>
 							</table>
-							</div>  
+							</div>
                         </div>
                         <div class="mbr-table-cell mbr-valign-top col-md-6">
 
@@ -139,8 +139,8 @@ if ($account['ppic']=="") {
                             <div class="mbr-section-btn"><a class="btn btn-primary" style="width:200px; padding-left:-10px;" href="addcamp">Add Camps</a>
                                 <a class="btn btn-primary" style="width:200px; padding-left:-10px;" href="managecamps">Manage Camps</a></div>
                                 <div class="mbr-section-btn"><a class="btn btn-primary" style="width:200px; padding-left:-10px;" href="addblood">Add Blood</a>
-                                    <a class="btn btn-primary" style="width:200px; padding-left:-10px;" href="manageblood">Manage Blood</a></div>
-							
+                                    <a class="btn btn-primary" style="width:200px; padding-left:-10px;" href="record">Manage Blood</a></div>
+
                         </div>
 
                     </div>
@@ -157,7 +157,7 @@ if ($account['ppic']=="") {
 
 
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-1" style="background-color: rgb(190, 22, 22); padding-top: 60px; padding-bottom: 30px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
@@ -181,7 +181,7 @@ Phone: +245 719 772 274<br></p>
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
         <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
     </div>
@@ -196,8 +196,8 @@ Phone: +245 719 772 274<br></p>
   <script src="../assets/dropdown/js/script.min.js"></script>
   <script src="../assets/js/jquery.touchSwipe.min.js"></script>
   <script src="../assets/js/script.js"></script>
-  
-  
+
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   </body>

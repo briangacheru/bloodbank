@@ -93,9 +93,9 @@ if(isset($_SESSION['userSession']))
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
-                <h3 class="mbr-section-title display-2">Register as a donor or recipient</h3>
+                <h4 class="mbr-section-title display-2">Register as a donor</h4>
                     <form method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
-                    <table cellpadding="0" cellspacing="0" style="margin:auto; width:100%;"  class="text-xl-right" >
+                    <table cellpadding="0" cellspacing="0" style="margin:auto; width:100%;"  class="text-xl-center" >
                     <tr><td colspan="2">&nbsp;</td></tr>
                     <td style="vertical-align:top">
                     <table >

@@ -10,7 +10,6 @@ if(isset($_POST['btncamp']))
 	$author = $MySQLi_CON->real_escape_string(trim($_POST['author']));
 	$odate = $MySQLi_CON->real_escape_string(trim($_POST['odate']));
 	$cdate = $MySQLi_CON->real_escape_string(trim($_POST['cdate']));
-	
 	$query = "INSERT INTO camps(title,body,author,odate,cdate) VALUES('$title','$body','$author','$odate','$cdate')";
 		
 		if($MySQLi_CON->query($query))
