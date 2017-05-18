@@ -51,6 +51,8 @@ if(isset($_POST['btn-register']))
 					<button class='close' data-dismiss='alert'>&times;</button>
 					Successfully registered click  <a href='login'> here </a> to login.
 			  	</div>";
+			  	$_SESSION['userSession'] = $email;
+			  	header("Location: account");
 			
 		}
 		else

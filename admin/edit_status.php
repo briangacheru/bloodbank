@@ -126,7 +126,7 @@ for($i=0; $i<$chkcount; $i++)
             </select>
         </td>
             <td>
-                <input title="issueddate" name="id[]" value="<?php echo date('Y-m-d'); ?>" required readonly  class="form-control"/>
+                <input title="issueddate" type="date" name="id[]" value="<?php echo date('Y/m/d'); ?>" required readonly  class="form-control"/>
             </td>
             <td>
                 <input title="issuedunits" type="number" name="iu[]" value="<?php echo $row['issuedunits'];?>"  class="form-control" required/>

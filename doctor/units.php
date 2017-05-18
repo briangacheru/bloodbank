@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 include_once 'db.php';
 
-$query = sprintf("SELECT bloodgroup, units FROM bloodunits ORDER BY id");
+$query = "SELECT bloodgroup , SUM(pints) as pints FROM donation GROUP BY bloodgroup ORDER BY bloodgroup ";
 
 $result = $MySQLi_CON->query($query);
 

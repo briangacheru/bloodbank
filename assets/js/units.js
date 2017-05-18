@@ -5,11 +5,11 @@
         success: function (data) {
             console.log(data);
             var bloodgroup = [];
-            var units = [];
+            var pints = [];
 
             for(var i in data){
                 bloodgroup.push("Bloodgroup " + data[i].bloodgroup);
-                units.push(data[i].units);
+                pints.push(data[i].pints);
             }
             var chardata = {
                 labels: bloodgroup,
@@ -20,7 +20,7 @@
                         borderColor: 'rgb(190, 22, 22)',
                         hoverBackgroundColor: 'rgb(190, 22, 22)',
                         hoverBorderColor: 'rgb(190, 22, 22)',
-                        data: units
+                        data: pints
                     }
                 ]
             };

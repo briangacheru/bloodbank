@@ -182,7 +182,7 @@ include_once 'db.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <input class="text-input"  name="reqdate" style="background-color: darkgray; color: red;" value="<?php echo date('Y/m/d H:i:s', strtotime('+7 days')); ?>" readonly />
+                                    <input class="text-input"  name="reqdate" style="background-color: darkgray; color: red;" value="<?php echo date('Y/m/d', strtotime('+7 days')); ?>" readonly />
                                 </td>
                             </tr>
                             <tr>
