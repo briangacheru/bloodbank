@@ -41,7 +41,7 @@ include 'adminreg.php';
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="https://mobirise.com" class="navbar-logo"><img src="assets/images/logo.png" alt="Mobirise"></a>
+                        <a href="#" class="navbar-logo"><img src="assets/images/logo.png" alt="Mobirise"></a>
                         <a class="navbar-caption" href="../index">BLOODBANK</a>
                     </div>
 
@@ -60,7 +60,7 @@ include 'adminreg.php';
                     <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
                     
                     <li class="nav-item dropdown">
-                      <a class="nav-link link dropdown-toggle" href="https://mobirise.com/" data-toggle="dropdown-submenu" aria-expanded="false">HELP</a>
+                      <a class="nav-link link dropdown-toggle" href="http://bloodbank.appslab.co.ke/"  data-toggle="dropdown-submenu" aria-expanded="false">HELP</a>
                       <div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.html">FAQS</a>
                       </div>
                       </li>
@@ -77,7 +77,7 @@ include 'adminreg.php';
 
 </section>
 
-<section class="engine"><a rel="external" href="https://mobirise.com">html website development</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-x" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
+<section class="engine"><a rel="external" href="#">html website development</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-x" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
 
     
     <div class="container">
@@ -152,11 +152,11 @@ style="border:0px;  width:150px; height:40px; border-radius: 10px;  box-shadow:1
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
 Email: support@bloodbank.appslab.co.ke<br>
-Phone: +245 719 772 274<br></p>
+Phone: +245 710 301 320<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
-<a href="sendrequest.html" class="text-white">Send Request</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="viewrequest.html" class="text-white">View Request</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="camps.html" class="text-white">Camps</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="about.html" class="text-white">About</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="contact.html" class="text-white">Contact us</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a></p><p></p>
+<a href="../user/viewrequests" class="text-white">View Request</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a></p><p></p>
             </div>
 
         </div>
@@ -166,7 +166,12 @@ Phone: +245 719 772 274<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-3" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
     
     <div class="container">
-        <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
+        <p class="text-xs-center">&copy; <?php 
+$copyYear = 2016; 
+$curYear = date('Y'); 
+echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
+?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
+    </div>
     </div>
 </footer>
 

@@ -48,7 +48,7 @@
                     </button>
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item"><a class="nav-link link" href="index.html">HOME</a></li><li class="nav-item"><a class="nav-link link" href="user/login.php">LOGIN</a></li>
-                      <li class="nav-item"><a class="nav-link link" href="user/register.php">REGISTER</a></li><li class="nav-item"><a class="nav-link link" href="camps.html">CAMPS</a></li><li class="nav-item"><a class="nav-link link" href="search.html">SEARCH</a></li><li class="nav-item"><a class="nav-link link" href="about.html">ABOUT</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="https://mobirise.com/" data-toggle="dropdown-submenu" aria-expanded="false">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.php">FAQS</a></div></li></ul>
+                      <li class="nav-item"><a class="nav-link link" href="user/register.php">REGISTER</a></li><li class="nav-item"><a class="nav-link link" href="camps.html">CAMPS</a></li><li class="nav-item"><a class="nav-link link" href="search.html">SEARCH</a></li><li class="nav-item"><a class="nav-link link" href="about.html">ABOUT</a></li><li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="http://bloodbank.appslab.co.ke/"  data-toggle="dropdown-submenu" aria-expanded="false">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.php">FAQS</a></div></li></ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -111,12 +111,11 @@
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
 Email: support@bloodbank.appslab.co.ke<br>
-Phone: +245 719 772 274<br></p>
+Phone: +245 710 301 320<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
-<a href="sendrequest.html" class="text-white">Send Request</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="viewrequest.html" class="text-white">View Request</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="camps.html" class="text-white">Camps</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="about.html" class="text-white">About</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a><br><a href="contact.html" class="text-white">Contact us</a><a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip"></a></p><p></p>
-            </div>
+<a href="../user/viewrequests" class="text-white">View Requests</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><p><p></p>
 
         </div>
     
@@ -125,7 +124,12 @@ Phone: +245 719 772 274<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-h" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
     
     <div class="container">
-        <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
+        <p class="text-xs-center">&copy; <?php 
+$copyYear = 2016; 
+$curYear = date('Y'); 
+echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
+?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
+    </div>
     </div>
 </footer>
 

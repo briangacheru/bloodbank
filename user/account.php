@@ -21,7 +21,7 @@ $MySQLi_CON->close();
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v3.8.3, mobirise.com">
+  <meta name="generator" content="Bloodbank">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
@@ -51,7 +51,7 @@ $MySQLi_CON->close();
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="https://mobirise.com" class="navbar-logo"><img src="../assets/images/logo.png" alt="Mobirise"></a>
+                        <a href="http://bloodbank.appslab.co.ke" class="navbar-logo"><img src="../assets/images/logo.png" alt="Bloodbank"></a>
                         <a class="navbar-caption" href="../index">BLOODBANK</a>
                     </div>
 
@@ -163,7 +163,7 @@ $MySQLi_CON->close();
         <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 20px; padding-bottom: 20px;">
             <div class="container">
                 <div class="card cart-block">
-                    <div class="card-img iconbox"><a href="https://mobirise.com" class="etl-icon icon-lightbulb mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
+                    <div class="card-img iconbox"><a href="#" class="etl-icon icon-lightbulb mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
                     <div class="card-block">
                         <h4 class="card-title">Personal Info</h4>
 
@@ -182,7 +182,7 @@ $MySQLi_CON->close();
         <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 20px; padding-bottom: 20px;">
             <div class="container">
                 <div class="card cart-block">
-                    <div class="card-img iconbox"><a href="https://mobirise.com" class="etl-icon icon-clock mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
+                    <div class="card-img iconbox"><a href="#" class="etl-icon icon-clock mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
                     <div class="card-block">
                         <h4 class="card-title">Status Record</h4>
                         
@@ -203,7 +203,7 @@ $MySQLi_CON->close();
         <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 20px; padding-bottom: 20px;">
             <div class="container">
                 <div class="card cart-block">
-                    <div class="card-img iconbox"><a href="https://mobirise.com" class="etl-icon icon-shield mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
+                    <div class="card-img iconbox"><a href="#" class="etl-icon icon-shield mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
                     <div class="card-block">
                         <h4 class="card-title">Current Requests</h4>
                         
@@ -232,11 +232,11 @@ $MySQLi_CON->close();
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
 Email: support@bloodbank.appslab.co.ke<br>
-Phone: +245 719 772 274<br></p>
+Phone: +245 710 301 320<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
-<a href="bloodrequest.php" class="text-white">Send Request</a><br><a href="viewrequest" class="text-white">View Request</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><br></p><p></p>
+<a href="../user/viewrequest" class="text-white">View Requests</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><br></p><p></p>
             </div>
 
         </div>
@@ -246,7 +246,11 @@ Phone: +245 719 772 274<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
     
     <div class="container">
-        <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
+        <p class="text-xs-center">&copy; <?php 
+$copyYear = 2016; 
+$curYear = date('Y'); 
+echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
+?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
 </footer>
 

@@ -56,7 +56,7 @@ if(isset($_SESSION['userSession']))
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="index" class="navbar-logo"><img src="../assets/images/logo.png" alt="Mobirise"></a>
+                        <a href="index" class="navbar-logo"><img src="../assets/images/logo.png" alt="Bloodbank Logo"></a>
                         <a class="navbar-caption" href="index.html">BLOODBANK</a>
                     </div>
 
@@ -87,7 +87,7 @@ if(isset($_SESSION['userSession']))
 
 </section>
 
-<section class="engine"><a rel="external" href="https://mobirise.com">html website development</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-x" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
+<section class="engine"><a rel="external" href="#">html website development</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-x" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
 
     
     <div class="container">
@@ -279,13 +279,14 @@ style="border:0px;  width:150px; height:40px; border-radius: 10px;  box-shadow:1
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
-Email: su ort@bloodbank.appslab.co.ke<br>
-Phone: +245 719 772 274<br></p>
+Email: support@bloodbank.appslab.co.ke<br>
+Phone: +245 710 301 320<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
-<a href="bloodrequest.php" class="text-white">Send Request</a><br><a href="viewrequest" class="text-white">View Request</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><br></p><p></p>
+<a href="../user/viewrequest" class="text-white">View Requests</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><br></p><p></p>
             </div>
+			
 
         </div>
     </div>
@@ -294,7 +295,13 @@ Phone: +245 719 772 274<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-3" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
     
     <div class="container">
-        <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
+        <p class="text-xs-center">&copy; <?php 
+$copyYear = 2016; 
+$curYear = date('Y'); 
+echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
+?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
+    </div>
+		
     </div>
 </footer>
 

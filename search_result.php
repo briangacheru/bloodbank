@@ -133,7 +133,7 @@ $sql=$MySQLi_CON->query("SELECT distinct * FROM `donarregister` WHERE b_id LIKE 
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
 Email: support@bloodbank.appslab.co.ke<br>
-Phone: +245 719 772 274<br></p>
+Phone: +245 710 301 320<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
@@ -147,7 +147,12 @@ Phone: +245 719 772 274<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-9" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
     
     <div class="container">
-        <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
+        <p class="text-xs-center">&copy; <?php 
+$copyYear = 2016; 
+$curYear = date('Y'); 
+echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
+?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
+    </div>
     </div>
 </footer>
 

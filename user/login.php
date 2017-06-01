@@ -66,7 +66,7 @@ if(isset($_SESSION['userSession']))
 					<li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
 					<li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
 					<li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
-					<li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="https://mobirise.com/" data-toggle="dropdown-submenu" aria-expanded="false">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.html">FAQS</a></div></li></ul>
+					<li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="http://bloodbank.appslab.co.ke/"  data-toggle="dropdown-submenu" aria-expanded="false">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.html">FAQS</a></div></li></ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -79,7 +79,7 @@ if(isset($_SESSION['userSession']))
                                                   
 </section>
 
-<section class="engine"><a rel="external" href="https://mobirise.com">easy responsive website maker software download</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-w" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
+<section class="engine"><a rel="external" href="#">easy responsive website maker software download</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-w" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
 
     
     <div class="container">
@@ -152,11 +152,11 @@ style="background-color: rgb(190, 22, 22); padding-top: 60px; padding-bottom: 30
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
 Email: support@bloodbank.appslab.co.ke<br>
-Phone: +245 719 772 274<br></p>
+Phone: +245 710 301 320<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
-<a href="bloodrequest.php" class="text-white">Send Request</a><br><a href="viewrequest" class="text-white">View Request</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><br></p><p></p>
+<a href="../user/viewrequest" class="text-white">View Requests</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><br></p><p></p>
             </div>
 
         </div>
@@ -166,7 +166,12 @@ Phone: +245 719 772 274<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-n" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
     
     <div class="container">
-        <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
+        <p class="text-xs-center">&copy; <?php 
+$copyYear = 2016; 
+$curYear = date('Y'); 
+echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
+?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
+    </div>
     </div>
 </footer>
 

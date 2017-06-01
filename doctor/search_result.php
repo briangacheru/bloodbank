@@ -50,7 +50,7 @@ $sql=$MySQLi_CON->query("SELECT distinct * FROM `donarregister` WHERE email LIKE
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="index" class="navbar-logo"><img src="../assets/images/logo.png" alt="Mobirise"></a>
+                        <a href="index" class="navbar-logo"><img src="../assets/images/logo.png" alt="Bloodbank Logo"></a>
                         <a class="navbar-caption" href="../index">BLOODBANK</a>
                     </div>
 
@@ -176,7 +176,7 @@ $sql=$MySQLi_CON->query("SELECT distinct * FROM `donarregister` WHERE email LIKE
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
 Email: support@bloodbank.appslab.co.ke<br>
-Phone: +245 719 772 274<br></p>
+Phone: +245 710 301 320<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
