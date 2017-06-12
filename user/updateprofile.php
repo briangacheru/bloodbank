@@ -19,11 +19,12 @@ if(isset($_POST['btn-update']))
 	$lname = $MySQLi_CON->real_escape_string(trim($_POST['lname']));
 	$mobile = $MySQLi_CON->real_escape_string(trim($_POST['mobile']));
 	$email = $MySQLi_CON->real_escape_string(trim($_POST['email']));
+	$county = $MySQLi_CON->real_escape_string(trim($_POST['county']));
 	
-	$query2 = $MySQLi_CON->query("SELECT  fname,lname,mobile,email FROM donarregister WHERE email='$_SESSION[userSession]'");
+	$query2 = $MySQLi_CON->query("SELECT  fname,lname,mobile,email,county FROM donarregister WHERE email='$_SESSION[userSession]'");
 	$row=$query2->fetch_array();
 
-	$updateQuery1 = "UPDATE donarregister SET fname='$fname', lname='$lname', mobile='$mobile', email='$email' WHERE email='$_SESSION[userSession]'";
+	$updateQuery1 = "UPDATE donarregister SET fname='$fname', lname='$lname', mobile='$mobile', email='$email', county='$county' WHERE email='$_SESSION[userSession]'";
 		mysqli_query($MySQLi_CON,$updateQuery1);
 
 		if($MySQLi_CON->query($updateQuery1)){
@@ -182,6 +183,14 @@ if ($account['ppic']=="") {
      <tr>
                         <td class="lefttd">Mobile</td>
                         <td>: <input class="text-input" type="text" name="mobile" required="required" value="<?php echo $account['mobile']; ?>" /></td>
+                      </tr>
+            <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+	<tr>
+                        <td class="lefttd">County</td>
+                        <td>: <input class="text-input" type="text" name="county" required="required" value="<?php echo $account['county']; ?>" /></td>
                       </tr>
             <tr>
       <td>&nbsp;</td>

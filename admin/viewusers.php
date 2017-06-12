@@ -85,7 +85,11 @@ $query=mysqli_query($MySQLi_CON,"select * from donarregister ORDER BY id DESC li
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
 					<li class="nav-item"><a class="nav-link link" href="../index">HOME</a></li>
 					<li class="nav-item"><a class="nav-link link" href="account">ACCOUNT</a></li>
-					  <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li><li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li><li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li></ul>
+					  <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
+					  <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
+					  <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+
+					  </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -158,7 +162,6 @@ if($count > 0)
 
     <label style="margin-left:100px;">
     <span style="word-spacing:normal;"> with selected :</span>
-    <span><img src="edit.png" onClick="edit_records();" alt="edit" />&nbsp;&nbsp;</span>
     <span><img src="delete.png" onClick="delete_records();" alt="delete" />&nbsp;</span>
     </label>
 
@@ -218,9 +221,9 @@ Phone: +245 710 301 320<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-5" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
 
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>

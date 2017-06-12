@@ -56,7 +56,13 @@ include 'new.php';
                     <li class="nav-item"><a class="nav-link link" href="account">ACCOUNT</a></li>
                       <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
                       <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
-                      <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+                                              <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link dropdown-toggle" href="#"
+                               data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['lname'];?></a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
+                                <a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
+                        </li>
                       </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>

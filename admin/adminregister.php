@@ -57,7 +57,13 @@ include 'adminreg.php';
                     <li class="nav-item"><a class="nav-link link" href="account">ACCOUNT</a></li>
                     <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
                     <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
-                    <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+                                            <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link dropdown-toggle" href="#"
+                               data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['lname'];?></a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
+                                <a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
+                        </li>
                     
                     <li class="nav-item dropdown">
                       <a class="nav-link link dropdown-toggle" href="http://bloodbank.appslab.co.ke/"  data-toggle="dropdown-submenu" aria-expanded="false">HELP</a>
