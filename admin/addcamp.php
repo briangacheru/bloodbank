@@ -10,13 +10,13 @@ include 'news.php';
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
   <title>Add Camp</title>
-  
-  
+
+
 
   <link rel="stylesheet" href="../assets/css/material.css">
   <link rel="stylesheet" href="../assets/css/tether.min.css">
@@ -56,14 +56,8 @@ include 'news.php';
 					<li class="nav-item"><a class="nav-link link" href="account">ACCOUNT</a></li>
 					  <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
 					  <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
-					                          <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link link dropdown-toggle" href="#"
-                               data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['lname'];?></a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
-                                <a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
-                        </li>
-					  </ul>
+					              <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+                        					  </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -76,7 +70,7 @@ include 'news.php';
 
 </section>
 <section class="mbr-section mbr-after-navbar" id="msg-box3-z" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
@@ -90,7 +84,7 @@ include 'news.php';
                         if(isset($msg1)){
                           echo $msg1;
                         }
-          
+
                         ?>
 
   <tr>
@@ -148,19 +142,19 @@ include 'news.php';
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
-    
+
       <td>&nbsp;</td>
-      <td> <input type="submit" value="Update Camps"  name="btncamp" 
+      <td> <input type="submit" value="Update Camps"  name="btncamp"
 style="border:0px;  width:150px; height:40px;  box-shadow:1px 1px 5px black; color:white; font-weight:bold; font-size:14px;
  background-color:#D50000; "></td>
     </tr>
-   
+
 </table>
 </td></tr>
 </table>
 </form>
-           
-               
+
+
             </div>
         </div>
     </div>
@@ -168,7 +162,7 @@ style="border:0px;  width:150px; height:40px;  box-shadow:1px 1px 5px black; col
 </section>
 
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-r" style="background-color: rgb(190, 22, 22); padding-top: 60px; padding-bottom: 30px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
@@ -187,15 +181,15 @@ Phone: +245 710 301 320<br></p>
 <a href="../user/viewrequests" class="text-white">View Requests</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><p><p></p>
 
         </div>
-    
+
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-9" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
@@ -212,7 +206,7 @@ echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
   <script src="../assets/js/jquery.touchSwipe.min.js"></script>
   <script src="../assets/js/script.js"></script>
 
-  
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   </body>

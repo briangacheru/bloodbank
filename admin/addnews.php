@@ -56,13 +56,8 @@ include 'new.php';
                     <li class="nav-item"><a class="nav-link link" href="account">ACCOUNT</a></li>
                       <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
                       <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
-                                              <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link link dropdown-toggle" href="#"
-                               data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['lname'];?></a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
-                                <a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
-                        </li>
+                        <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+
                       </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
@@ -176,7 +171,7 @@ include 'new.php';
                                     <td>News body</td>
                                     <td>: <span id="sprytextfield2">
         <label for="body"></label>
-                                            <textarea type="text" style="padding-top: 5px;" class="text-input1" name="body"  id="body" required="required" ></textarea> 
+                                            <textarea type="text" style="padding-top: 5px;" class="text-input1" name="body"  id="body" required="required" ></textarea>
       </span></td>
                                 </tr>
                                 <tr>
@@ -230,9 +225,9 @@ include 'new.php';
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-9" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
 
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>

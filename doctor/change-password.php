@@ -3,11 +3,6 @@
 include_once 'db.php';
 include_once 'log.php';
 
-//if(isset($_SESSION['userSessionDoctor']))
-//{
-	//header("Location: login");
-//}
-
 if(isset($_POST['btn-password']))
 {
 	$email = $MySQLi_CON->real_escape_string(trim($_POST['email']));
@@ -16,8 +11,8 @@ if(isset($_POST['btn-password']))
 	$password_again = $MySQLi_CON->real_escape_string(trim($_POST['password_again']));
 
 	$new_password = password_hash($upass, PASSWORD_DEFAULT);
-	
-	$query = $MySQLi_CON->query("SELECT * FROM doctorregister WHERE email='$email' AND code='$code'");
+
+	$query = $MySQLi_CON->query("SELECT * FROM doctorregister WHERE email='$email'");
 	$row=$query->fetch_array();
 
 	if($upass!=$password_again){
@@ -32,21 +27,21 @@ if(isset($_POST['btn-password']))
 
 			if(isset($_SESSION['userSessionDoctor']))
 				{
-				//session_start();
+				session_start();
 				session_destroy();
 				unset($_SESSION['userSessionDoctor']);
-				//header("Location: login");
+				header("Location: index");
 				exit();
 			}
 
 		$msg3 = "<div class='alert bg-succeed'>
 					<button class='close' data-dismiss='alert'>&times;</button>
-					Password Successfully Changed. Click <a href='login' >here</a> to login
+					Password Successfully Changed. Click <a href='index' >here</a> to login
 			  	</div>";
 
 	}else {
 		$msg3 = "<div class='alert bg-info'>
-						<button class='close' data-dismiss='alert'>&times;</button> Email or Code does not Match existing Acount details. 
+						<button class='close' data-dismiss='alert'>&times;</button> Email or Code does not Match existing Acount details.
 					Please Try Again</div>";
 	}
 
@@ -63,13 +58,13 @@ if(isset($_POST['btn-password']))
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
   <title>Change Password</title>
-  
-  
+
+
 
   <link rel="stylesheet" href="../assets/css/material.css">
   <link rel="stylesheet" href="../assets/css/tether.min.css">
@@ -79,9 +74,9 @@ if(isset($_POST['btn-password']))
   <link rel="stylesheet" href="../assets/dropdown/css/style.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/add.css" type="text/css">
-  
-  
-  
+
+
+
 </head>
 <body>
 <section id="ext_menu-s">
@@ -126,9 +121,9 @@ if(isset($_POST['btn-password']))
 
 <section class="engine"><a rel="external" href="index">best offline web page maker</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-z" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
 
-    
+
     <div class="container">
-        
+
             <div class="col-md-8 col-md-offset-2 text-xs-center">
                 <h3 class="mbr-section-title display-2">Change Your Password</h3>
                 <?php
@@ -152,7 +147,7 @@ if(isset($_POST['btn-password']))
                         <td class="lefttd">Code</td>
                         <td>: <input class="text-input" type="text" name="code" required="required" </td>
                       </tr>
-          
+
             <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
@@ -173,8 +168,8 @@ if(isset($_POST['btn-password']))
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
-                      
-                <tr><td>&nbsp;</td><td><input type="submit" value="Change Password"   name="btn-password" 
+
+                <tr><td>&nbsp;</td><td><input type="submit" value="Change Password"   name="btn-password"
         style="border:0px; border-radius: 10px;  width:150px; height:40px;  box-shadow:1px 1px 5px black; color:white;
         font-weight:bold; font-size:14px; background-color:#D50000;  "/></td></tr>
                 <tr>
@@ -184,13 +179,13 @@ if(isset($_POST['btn-password']))
         </table>
                 </form>
 		</div>
-		
+
     </div>
 
 </section>
 
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-r" style="background-color: rgb(190, 22, 22); padding-top: 60px; padding-bottom: 30px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
@@ -209,15 +204,15 @@ Phone: +245 710 301 320<br></p>
 <a href="../user/viewrequests" class="text-white">View Requests</a><br><a href="../camps" class="text-white">Camps</a><br><a href="../about" class="text-white">About</a><br><a href="../contact" class="text-white">Contact us</a><p><p></p>
 
         </div>
-    
+
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-9" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
@@ -233,8 +228,8 @@ echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
   <script src="../assets/dropdown/js/script.min.js"></script>
   <script src="../assets/js/jquery.touchSwipe.min.js"></script>
   <script src="../assets/js/script.js"></script>
-  
-  
+
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   </body>

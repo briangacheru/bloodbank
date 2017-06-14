@@ -5,8 +5,8 @@ include_once 'log.php';
 
 if(isset($_POST['btn-password']))
 {
-	$password = $MySQLi_CON->real_escape_string(trim($_POST['password']));
-	$upass = $MySQLi_CON->real_escape_string(trim($_POST['newpassword']));
+	$email = $MySQLi_CON->real_escape_string(trim($_POST['email']));
+	$upass = $MySQLi_CON->real_escape_string(trim($_POST['password']));
 	$password_again = $MySQLi_CON->real_escape_string(trim($_POST['password_again']));
 
 	$new_password = password_hash($upass, PASSWORD_DEFAULT);
@@ -20,7 +20,7 @@ if(isset($_POST['btn-password']))
 						 Passwords Do Not Match! Try Again
 					</div>";
        }else{
-	if ($row['password']==$password) {
+	if ($row['email']==$email) {
 		$updateQuery1 = "UPDATE donarregister SET password='$new_password' WHERE email='$email'";
 		mysqli_query($MySQLi_CON,$updateQuery1);
 
@@ -87,7 +87,7 @@ if(isset($_POST['btn-password']))
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="index" class="navbar-logo"><img src="../assets/images/logo.png" alt="Bloodbank Logo"></a>
+                        <a href="index" class="navbar-logo"><img src="../assets/images/logo.png" alt="Mobirise"></a>
                         <a class="navbar-caption" href="../index.html">BLOODBANK</a>
                     </div>
 
@@ -104,7 +104,7 @@ if(isset($_POST['btn-password']))
 					  <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
 					  <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
 					  <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
-					  <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="http://bloodbank.appslab.co.ke/"  data-toggle="dropdown-submenu" aria-expanded="false">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.html">FAQS</a></div></li></ul>
+					  <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="https://mobirise.com/" data-toggle="dropdown-submenu" aria-expanded="false">HELP</a><div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.html">FAQS</a></div></li></ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>
                     </button>
@@ -134,8 +134,8 @@ if(isset($_POST['btn-password']))
 		<form method="post">
                        <table cellpadding="0" cellspacing="0" width="100%"  class="tableborder" style="margin:auto" >
                       <tr>
-                        <td class="lefttd">Current Password</td>
-                        <td>: <input class="text-input" type="password" name="lpassword" required="required" </td>
+                        <td class="lefttd">Email</td>
+                        <td>: <input class="text-input" type="email" name="email" required="required" </td>
                       </tr>
             <tr>
       <td>&nbsp;</td>
@@ -143,7 +143,7 @@ if(isset($_POST['btn-password']))
     </tr>
      <tr>
                         <td class="lefttd">New Password</td>
-                        <td>: <input class="text-input" type="password" name="newpassword" required="required" /></td>
+                        <td>: <input class="text-input" type="password" name="password" required="required" /></td>
                       </tr>
             <tr>
       <td>&nbsp;</td>
@@ -186,7 +186,7 @@ if(isset($_POST['btn-password']))
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p><strong>Contacts</strong><br>
 Email: support@bloodbank.appslab.co.ke<br>
-Phone: +245 710 301 320<br></p>
+Phone: +245 719 772 274<br></p>
             </div>
             <div class="mbr-footer-content col-xs-12 col-md-3">
                 <p></p><p><strong>Links</strong><br>
@@ -200,12 +200,7 @@ Phone: +245 710 301 320<br></p>
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-9" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
 
     <div class="container">
-        <p class="text-xs-center">&copy; <?php
-$copyYear = 2016;
-$curYear = date('Y');
-echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
-?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
-    </div>
+        <p class="text-xs-center">Copyright (c) 2016 Bloodbank.</p>
     </div>
 </footer>
 

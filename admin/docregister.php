@@ -16,13 +16,13 @@ if(isset($_SESSION['userSessionDoctor']))
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
   <title>Register a Doctor</title>
-  
-  
+
+
 
   <link rel="stylesheet" href="../assets/css/material.css">
   <link rel="stylesheet" href="../assets/css/tether.min.css">
@@ -32,7 +32,7 @@ if(isset($_SESSION['userSessionDoctor']))
   <link rel="stylesheet" href="../assets/dropdown/css/style.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/add.css" type="text/css">
-  
+
 </head>
 <body>
 <section id="ext_menu-s">
@@ -60,13 +60,8 @@ if(isset($_SESSION['userSessionDoctor']))
                     <li class="nav-item"><a class="nav-link link" href="account">ACCOUNT</a></li>
                     <li class="nav-item"><a class="nav-link link" href="../camps">CAMPS</a></li>
                     <li class="nav-item"><a class="nav-link link" href="../search">SEARCH</a></li>
-                                            <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link link dropdown-toggle" href="#"
-                               data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['lname'];?></a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
-                                <a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
-                        </li>
+                    <li class="nav-item"><a class="nav-link link" href="../about">ABOUT</a></li>
+
                     <li class="nav-item dropdown">
                       <a class="nav-link link dropdown-toggle" href="http://bloodbank.appslab.co.ke/"  data-toggle="dropdown-submenu" aria-expanded="false">HELP</a>
                       <div class="dropdown-menu"><a class="dropdown-item" href="contact.html">CONTACT US</a><a class="dropdown-item" href="faqs.html">FAQS</a>
@@ -87,7 +82,7 @@ if(isset($_SESSION['userSessionDoctor']))
 
 <section class="engine"><a rel="external" href="#">html website development</a></section><section class="mbr-section mbr-after-navbar" id="msg-box3-x" style="background-color: rgb(242, 242, 242); padding-top: 120px; padding-bottom: 120px;">
 
-    
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
@@ -101,7 +96,7 @@ if(isset($_SESSION['userSessionDoctor']))
                         if(isset($msg1)){
                           echo $msg1;
                         }
-          
+
                         ?>
 
   <tr>
@@ -172,17 +167,17 @@ if(isset($_SESSION['userSessionDoctor']))
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td> <input type="submit" value="Sign Up"  name="btnsignup" 
+      <td> <input type="submit" value="Sign Up"  name="btnsignup"
 style="border:0px;  width:150px; height:40px; border-radius: 10px;  box-shadow:1px 1px 5px black; color:white; font-weight:bold; font-size:14px;
  background-color:#D50000; "></td>
     </tr>
-   
+
 </table>
 </td></tr>
 </table>
 </form>
-           
-               
+
+
             </div>
         </div>
     </div>
@@ -190,7 +185,7 @@ style="border:0px;  width:150px; height:40px; border-radius: 10px;  box-shadow:1
 </section>
 
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-r" style="background-color: rgb(190, 22, 22); padding-top: 60px; padding-bottom: 30px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
@@ -214,11 +209,11 @@ Phone: +245 710 301 320<br></p>
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-3" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
@@ -234,8 +229,8 @@ echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
   <script src="../assets/dropdown/js/script.min.js"></script>
   <script src="../assets/js/jquery.touchSwipe.min.js"></script>
   <script src="../assets/js/script.js"></script>
-  
-  
+
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   </body>

@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
@@ -71,7 +71,7 @@
       <a class = "btn btn-success" href = "member.php"><span class = "glyphicon glyphicon-hand-right"></span> Back</a>
       <br/>
       <br/>
-      <div class = "row"> 
+      <div class = "row">
         <div class = "col-md-2 ">
         </div>
         <div class = "col-md-2">
@@ -92,10 +92,10 @@
               <label>Last Name :</label>
               <input type = "text" id = "lname" type = "text" value= "<?php echo $acc_fetch['lname']?>" class = "text-input" />
             </div>
-            <div class = "form-group">
+            <!--<div class = "form-group">
               <label>Email Address :</label>
               <input type = "email" id = "email" type = "email" value= "<?php echo $acc_fetch['email']?>" class = "text-input" />
-            </div>
+            </div>-->
             <div class = "form-group">
               <label>Bloodgroup :</label>
               <input  id = "b_id" type = "text" value = "<?php echo $acc_fetch['b_id']?>" class = "text-input" />
@@ -108,15 +108,15 @@
             </div>
           </form>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
-   
+
 
 </section>
 
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-r" style="background-color: rgb(190, 22, 22); padding-top: 60px; padding-bottom: 30px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
@@ -136,15 +136,15 @@ Phone: +245 710 301 320<br></p>
             </div>
 
         </div>
-    
+
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-5" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
@@ -153,7 +153,7 @@ echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 
 
   <script src="../assets/js/jquery.min.js"></script>
-  
+
   <script src="../assets/js/SmoothScroll.js"></script>
   <script src="../assets/js/jquery.viewportchecker.js"></script>
   <script src="../assets/dropdown/js/script.min.js"></script>
@@ -167,8 +167,8 @@ echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 		$('#table').DataTable();
 	})
 </script>
-  
-  
+
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   </body>

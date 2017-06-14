@@ -1,15 +1,47 @@
+
+<?php
+
+include_once 'db.php';
+
+if(isset($_POST['btn-contactus']))
+{
+	$name = $MySQLi_CON->real_escape_string(trim($_POST['name']));
+	$email = $MySQLi_CON->real_escape_string(trim($_POST['email']));
+	$message = $MySQLi_CON->real_escape_string(trim($_POST['message']));
+
+  $query = "INSERT INTO contactus(name,email,message)
+        VALUES('$name','$email','$message')";
+
+        if($MySQLi_CON->query($query))
+        {
+                $msg1 =  "<div class='alert bg-succeed'>
+              <button class='close' data-dismiss='alert'>&times;</button>
+              Message successfully sent. We will get back to you as soon as possible.
+              </div>";
+
+        }
+        else
+        {
+          $msg1 = "<div class='alert bg-info'>
+                <button class='close' data-dismiss='alert'>&times;</button> Error while sending message !!!
+              </div>";
+        }
+      }	$MySQLi_CON->close();
+
+      ?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
-  <title>About</title>
-  
-  
+  <title>Contac Us</title>
+
+
 
   <link rel="stylesheet" href="assets/css/material.css">
   <link rel="stylesheet" href="assets/css/tether.min.css">
@@ -19,9 +51,9 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/add.css" type="text/css">
-  
-  
-  
+
+
+
 </head>
 <body>
 <section id="ext_menu-s">
@@ -58,13 +90,13 @@
 </section>
 
 <section class="mbr-section" id="form1-0" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
-    
+
     <div class="mbr-section mbr-section__container mbr-section__container--middle">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-xs-center">
                     <h3 class="mbr-section-title display-2">CONTACT FORM</h3>
-                    <small class="mbr-section-subtitle">Shape your future web project with sharp design and refine coded functions.</small>
+                    <small class="mbr-section-subtitle">Reach us with that complement of complain. We will be glad to know how you value us.</small>
                 </div>
             </div>
         </div>
@@ -73,16 +105,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-lg-10 col-lg-offset-1" data-form-type="formoid">
+                    <form method="post" data-form-title="CONTACT FORM">
+                      <?php
+                        if(isset($msg1)){
+                          echo $msg1;
+                        }
 
+                        ?>
 
-                    <div data-form-alert="true">
-                        <div hidden="" data-form-alert-success="true" class="alert alert-form alert-success text-xs-center">Thanks for filling out the contact form. We shall reply as soon as possiblse</div>
-                    </div>
-
-
-                    <form action="sendemail.php" method="post" data-form-title="CONTACT FORM">
-
-                        <input type="hidden" value="pcmWXOObdMcPZoW6XfFsg6SCeMSsg8rg1RTH4Xw6zy4uu/smJCEqNeXznMIHAqbJLJhHhssTCZpHsWJe7eJADdIgJo+25naH6ZjHOw/r2TvJG5xhrS7ezPy5NrVY8rAn" data-form-email="true">
+                        <input type="hidden" value="" data-form-email="true">
 
                         <div class="row row-sm-offset">
 
@@ -98,10 +129,7 @@
                                     <label class="form-control-label" for="form1-0-email">Email<span class="form-asterisk">*</span></label>
                                     <input type="email" class="form-control" name="email" required="" data-form-field="Email" id="form1-0-email">
                                 </div>
-                            </div>
-
-                            
-
+                        </div>
                         </div>
 
                         <div class="form-group">
@@ -109,7 +137,7 @@
                             <textarea class="form-control" name="message" rows="7" data-form-field="Message" id="form1-0-message"></textarea>
                         </div>
 
-                        <div><button type="submit" class="btn btn-primary">CONTACT US</button></div>
+                        <div><button type="submit" name="btn-contactus" class="btn btn-primary">CONTACT US</button></div>
 
                     </form>
                 </div>
@@ -118,7 +146,7 @@
     </div>
 </section>
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-r" style="background-color: rgb(190, 22, 22); padding-top: 60px; padding-bottom: 30px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
@@ -138,15 +166,15 @@ Phone: +245 710 301 320<br></p>
             </div>
 
         </div>
-    
+
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-7" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
@@ -162,8 +190,8 @@ echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
   <script src="assets/dropdown/js/script.min.js"></script>
   <script src="assets/js/jquery.touchSwipe.min.js"></script>
   <script src="assets/js/script.js"></script>
-  
-  
+
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   </body>

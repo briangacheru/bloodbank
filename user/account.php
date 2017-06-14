@@ -38,8 +38,8 @@ $MySQLi_CON->close();
   <link rel="stylesheet" href="../assets/dropdown/css/style.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/add.css" type="text/css">
-  
-  
+
+
 </head>
 <body>
 <section id="ext_menu-s">
@@ -71,7 +71,7 @@ $MySQLi_CON->close();
                         <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle" href="#" data-toggle="dropdown-submenu" aria-expanded="false">HELP</a>
                             <div class="dropdown-menu"><a class="dropdown-item" href="../contact">CONTACT US</a><a class="dropdown-item" href="../faqs">FAQS</a></div></li>
                     <li class="nav-item dropdown">
-					<a class="nav-link link dropdown-toggle" href="#" 
+					<a class="nav-link link dropdown-toggle" href="#"
 					data-toggle="dropdown-submenu" style="text-transform: uppercase;" aria-expanded="false"><?php echo $account['fname'];?></a>
 					<div class="dropdown-menu"><a class="dropdown-item" href="logout.php">LOGOUT</a>
 					<a class="dropdown-item" href="change-password">CHANGE PASSWORD</a></div>
@@ -83,17 +83,17 @@ $MySQLi_CON->close();
                     </button>
 
                 </div>
-				
+
             </div>
 
         </div>
     </nav>
-	
+
 
 </section>
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-after-navbar" id="header2-7" style="background-color: rgb(239, 239, 239);">
 
-    
+
 
     <div class="mbr-table mbr-table-full">
         <div class="mbr-table-cell">
@@ -101,16 +101,16 @@ $MySQLi_CON->close();
             <div class="container">
                 <div class="mbr-section row">
                     <div class="mbr-table-md-up">
-                        
-                        
-                        
+
+
+
 
                         <div class="mbr-table-cell mbr-left-padding-md-up col-md-6 text-xs-center text-md-left">
-						
+
 							<div class="mbr-figure col-lg-6">
 							<table>
 							<tr>
-							<td  align="right">&nbsp;</td> 
+							<td  align="right">&nbsp;</td>
 							<td>
 							 <div class="user-img-div">
                              <?php
@@ -124,23 +124,26 @@ $MySQLi_CON->close();
 							<div class="mbr-section-btn">
                               <a class="btn btn-primary btn-loading" style="margin-left:20px; margin-top:10px" href="uploadpicture">Edit Profile Picture</a>
 							</div>
-							
+
 							</td></tr>
 							</table>
-							</div>  
+							</div>
                         </div>
                         <div class="mbr-table-cell mbr-valign-top col-md-6">
-						
-                            <h3 class="mbr-section-title display-2"><span style="font-weight: normal; color:#000; text-align: left;">
+
+                            <h3 class="mbr-section-title display-2"><span style="font-weight: normal;text-transform: uppercase; color:#000; text-align: left;">
                              <?php echo $account['fname'];?>&nbsp; <?php echo $account['lname'];?></span></h3>
-							 
+
                             <div class="mbr-section-btn">
 							  <a class="btn btn-primary" href="#features7-0" style="width:200px; padding-left:-10px;"> View Profile</a>
                               <a class="btn btn-primary" href="updateprofile.php" style="width:200px; padding-left:-10px;">Update Info</a> </div>
 							<div class="mbr-section-btn">
-							  <a class="btn btn-primary" href="bloodavailable" style="width:200px; padding-left:-10px;">Blood Units</a>
+							  <a class="btn btn-primary" href="bloodrequest" style="width:200px; padding-left:-10px;">Send Request</a>
 							  <a class="btn btn-primary" href="viewrequests" style="width:200px; padding-left:-10px;">View Requests</a>
-							  </div>                         
+							  </div>
+                <div class="mbr-section-btn">
+  							  <a class="btn btn-primary" href="bloodavailable" style="width:200px; padding-left:-10px;">Blood Units</a>
+                </div>
                         </div>
 
                     </div>
@@ -156,7 +159,7 @@ $MySQLi_CON->close();
 
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features7-0" style="background-color: rgb(239, 239, 239);">
 
-    
+
 
     <div class="mbr-cards-row row">
         <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 20px; padding-bottom: 20px;">
@@ -166,14 +169,14 @@ $MySQLi_CON->close();
                     <div class="card-block">
                         <h4 class="card-title">Personal Info</h4>
 
-                        
+
                         <p class="card-text"><strong>Name:</strong>  <?php echo $account['fname'];?> &nbsp; <?php echo $account['lname'];?> <br><br>
-                        
+
 						<strong>Email:</strong>  <?php echo $account['email'];?><br><br>
                         <strong>Phone No:</strong>  <?php echo $account['mobile'];?><br><br>
                         <strong>County:</strong>  <?php echo $account['county'];?>&nbsp;<br><br>
                         <strong>Age:</strong> <?php $year=date('Y'); $age= $year- $account['year'];  echo $age; ?> Years</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -184,7 +187,7 @@ $MySQLi_CON->close();
                     <div class="card-img iconbox"><a href="#" class="etl-icon icon-clock mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
                     <div class="card-block">
                         <h4 class="card-title">Status Record</h4>
-                        
+
                         <p class="card-text">
 
                             <strong>Blood Group:</strong>  <?php echo $account['b_id'];?><br><br>
@@ -192,9 +195,9 @@ $MySQLi_CON->close();
 						<strong>Next Time Possible Donation:</strong>After 4 Months<br><br>
 						<strong>Number of Donations:</strong><?php echo $account['number_of_donations'];?><br><br>
 						<strong>Last Donation Camp:</strong><?php echo $account['last_donation_camp'];?><br><br>
-						
+
 						</p>
-                        
+
                     </div>
                 </div>
           </div>
@@ -205,21 +208,21 @@ $MySQLi_CON->close();
                     <div class="card-img iconbox"><a href="#" class="etl-icon icon-shield mbr-iconfont mbr-iconfont-features7" style="color: rgb(255, 255, 255);"></a></div>
                     <div class="card-block">
                         <h4 class="card-title">Current Requests</h4>
-                        
+
                         <p class="card-text"><strong>Existing Request:</strong> Bloood Group B+<br><br><strong>Respond to Request:</strong> Otieno Sam/N/A<br><br><strong>Confirmation By Doctor:</strong> Pending<br><br><strong>Date Responded:</strong> 22/3/2014<br><br><strong>Date Confirmed:</strong> 22/12/2013</p>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
-        
-        
-        
+
+
+
     </div>
 </section>
 
 <section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-1" style="background-color: rgb(190, 22, 22); padding-top: 20px; padding-bottom: 20px;">
-    
+
     <div class="container">
         <div class="row">
             <div class="mbr-footer-content col-xs-12 col-md-3">
@@ -243,11 +246,11 @@ Phone: +245 710 301 320<br></p>
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
+
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
@@ -262,8 +265,8 @@ echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
   <script src="../assets/dropdown/js/script.min.js"></script>
   <script src="../assets/js/jquery.touchSwipe.min.js"></script>
   <script src="../assets/js/script.js"></script>
-  
-  
+
+
   <input name="animation" type="hidden">
    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
   </body>

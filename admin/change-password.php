@@ -28,6 +28,15 @@ if(isset($_POST['btn-password']))
             $updateQuery1 = "UPDATE admin SET password='$new_password' WHERE email='$email'";
             mysqli_query($MySQLi_CON,$updateQuery1);
 
+            if(isset($_SESSION['userSessionAdmin']))
+              {
+              session_start();
+              session_destroy();
+              unset($_SESSION['userSessionAdmin']);
+              header("Location: index");
+              exit();
+            }
+
             $msg3 = "<div class='alert bg-succeed'>
 					<button class='close' data-dismiss='alert'>&times;</button>
 					Password Successfully Changed. Click <a href='index' >here</a> to login
@@ -35,7 +44,7 @@ if(isset($_POST['btn-password']))
 
         }else {
             $msg3 = "<div class='alert bg-info'>
-						<button class='close' data-dismiss='alert'>&times;</button> Email does not Match existing Acount details. 
+						<button class='close' data-dismiss='alert'>&times;</button> Email does not Match existing Acount details.
 					Please Try Again</div>";
         }
 
@@ -197,9 +206,9 @@ $MySQLi_CON->close();
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-9" style="background-color: rgb(190, 22, 22); padding-top: 1.75rem; padding-bottom: 1.75rem;">
 
     <div class="container">
-        <p class="text-xs-center">&copy; <?php 
-$copyYear = 2016; 
-$curYear = date('Y'); 
+        <p class="text-xs-center">&copy; <?php
+$copyYear = 2016;
+$curYear = date('Y');
 echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
 ?> | <a class="text-white" href="bloodbank.appslab.co.ke">BLOODBANK</a></p>
     </div>
